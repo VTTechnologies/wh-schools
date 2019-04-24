@@ -16,7 +16,7 @@ namespace Waad_Academy_School.Models
     public partial class Student
     {
         public int StudentId { get; set; }
-        [DisplayName("National Id:")]
+        [DisplayName("National Id/Iqama")]
         public string StudentNo { get; set; }
         public Nullable<int> SchoolId { get; set; }
         public Nullable<decimal> Latitude { get; set; }

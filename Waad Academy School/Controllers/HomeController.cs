@@ -62,17 +62,18 @@ namespace Waad_Academy_School.Controllers
         public FileResult Exporttoexcel(int schlid)
         {
             DataTable dt = new DataTable("Grid");
-            dt.Columns.AddRange(new DataColumn[4] { new DataColumn("Student No"),
+            dt.Columns.AddRange(new DataColumn[5] { new DataColumn("Student No"),
                                             new DataColumn("School ID"),
                                             new DataColumn("Latitude"),
-                                            new DataColumn("Longitude") });
+                                            new DataColumn("Longitude"),
+            new DataColumn("Created Date")});
 
 
             var ss = _contextdb.Students.Where(s => s.SchoolId == schlid).ToList();
 
             foreach (var student in ss)
             {
-                dt.Rows.Add(student.StudentNo, student.SchoolId, student.Latitude, student.Longitude);
+                dt.Rows.Add(student.StudentNo, student.SchoolId, student.Latitude, student.Longitude, student.CreatedOn);
             }
 
             using (XLWorkbook wb = new XLWorkbook())

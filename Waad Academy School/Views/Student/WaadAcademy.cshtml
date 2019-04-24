@@ -46,7 +46,7 @@
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-6 col-md-offset-3">
                 <div class="row">
                     <div class="col-md-4">
                         @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
@@ -61,7 +61,7 @@
                 <br />
                 <div class="form-group">
                     <div class="col-md-offset-4 col-md-2">
-                        <input type="button" value="Create" class="btn btn-default" onclick="return getLocation()" />
+                        <input type="button" value="Submit" class="btn btn-primary" onclick="return getLocation()" />
                     </div>
                     @*<div class="col-md-offset-4 col-md-2">
                         <input type="button" value="Allow app to get your loaction" class="btn btn-default" />
@@ -90,7 +90,7 @@
             return false;
         }
         if (document.getElementById('StudentNo').value == "") {
-            alert("Please Enter Student Number")
+            alert("Please Enter National Id");
             return false
         }
         else {
@@ -144,7 +144,8 @@
                dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: function () {
-                alert("Your details have been saved");
+                //alert("Your details have been saved Thank you from Waad Academy");
+                alert("Thank you for submission");
                },
                error: function () {
                    alert("Error while inserting data");

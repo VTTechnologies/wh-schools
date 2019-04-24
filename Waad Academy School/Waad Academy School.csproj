@@ -297,8 +297,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Student\WaadAcademy.cshtml" />
     <Content Include="Views\Student\Bloom.cshtml" />
-    <Content Include="Views\Student\DarulZikrGirls.cshtml" />
-    <Content Include="Views\Student\DarulZikrBoys.cshtml" />
+    <Content Include="Views\Student\DarAlThikrGirls.cshtml" />
+    <Content Include="Views\Student\DarAlThikrBoys.cshtml" />
     <Content Include="Views\Home\login.cshtml" />
     <Content Include="Views\Home\export.cshtml" />
     <Content Include="Views\Home\Instruction.cshtml" />
