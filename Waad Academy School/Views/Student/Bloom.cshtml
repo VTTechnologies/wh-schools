@@ -13,35 +13,75 @@
 
 @using (Html.BeginForm())
 {
-@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-<div class="form-horizontal" style="background:lightgray">
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="row">
-                    <div class="col-md-4">
-                        @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
-                    </div>
-                    <div class="col-md-8">
-                        @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
-                        @Html.HiddenFor(m => m.Latitude)
-                        @Html.HiddenFor(m => m.Longitude)
-                    </div>
-                </div>
-                <br />
-                <div class="form-group">
-                    <div class="col-md-offset-4 col-md-2">
-                        <input type="button" value="Submit" class="btn btn-primary" onclick="getLocation()" />
-                    </div>
+    <div class="form-horizontal" style="background:lightgray">
+        <hr />
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-10" style="margin:0px 40px 0px 40px">
+                    <p>
+                        <b>Dear Parents,</b><br>
+                        In order to provide better quality services in many different fields for our students, please kindly fill out the form below for the student's address.<br>
+                        Thank you<br>
+                        Bloom Schools
+                    </p>
                 </div>
             </div>
         </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <center>
+                        <div class="row">
+                            <div class="col-md-5">
+                                @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
+                            </div>
+                            <div class="col-md-7">
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
+                                @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(m => m.Latitude)
+                                @Html.HiddenFor(m => m.Longitude)
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-3">
+                                <input type="button" value="Submit" class="btn btn-primary" onclick="return getLocation()" />
+                            </div>
+                            @*<div class="col-md-offset-4 col-md-2">
+            <input type="button" value="Allow app to get your loaction" class="btn btn-default" />
+        </div>*@
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        @*<div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
+                            </div>
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(m => m.Latitude)
+                                @Html.HiddenFor(m => m.Longitude)
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-4">
+                                <input type="button" value="Submit" class="btn btn-primary" onclick="getLocation()" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
     </div>
-</div>
 }
 
 <script type="text/javascript">
@@ -110,6 +150,7 @@
             success: function () {
                 //alert("Your details have been saved Thank you from Dar Bloom");
                 alert("Thank you for submission");
+                $("#StudentNo").val("");
                },
                error: function () {
                    alert("Error while inserting data");

@@ -41,6 +41,10 @@ namespace Waad_Academy_School.Controllers
         {
             return View();
         }
+        public ActionResult Thankyou()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult StudentSave(Student student)

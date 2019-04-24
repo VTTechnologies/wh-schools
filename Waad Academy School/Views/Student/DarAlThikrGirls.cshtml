@@ -13,35 +13,79 @@
 
 @using (Html.BeginForm())
 {
-@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-<div class="form-horizontal" style="background:lightgray">
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="row">
-                    <div class="col-md-4">
-                        @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
-                    </div>
-                    <div class="col-md-8">
-                        @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
-                        @Html.HiddenFor(m => m.Latitude)
-                        @Html.HiddenFor(m => m.Longitude)
-                    </div>
-                </div>
-                <br />
-                <div class="form-group">
-                    <div class="col-md-offset-4 col-md-2">
-                        <input type="button" value="Submit" class="btn btn-primary" onclick="getLocation()" />
-                    </div>
+    <div class="form-horizontal" style="background:lightgray">
+        <hr />
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-10 pull-right" style="margin-left:40px;margin-right:40px">
+                    <p style="text-align:right; font-size:large">
+                        @*<b>Dear Parents,</b><br>*@
+                        من أجل تقديم خدمات ذات جودة أفضل في العديد من المجالات المختلفة لطالباتنا ، يرجى ملء النموذج أدناه للحصول على عنوان الطالب
+
+                        رقم هوية الطالبة/الإقامة
+                        <br>
+                    <p style="text-align:right; font-size:large">شكرا</p>
+                    <br>
+                    </p>
                 </div>
             </div>
         </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <center>
+                        <div class="row">
+                            <div class="col-md-5">
+                                @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
+                            </div>
+                            <div class="col-md-7">
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
+                                @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(m => m.Latitude)
+                                @Html.HiddenFor(m => m.Longitude)
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-3">
+                                <input type="button" value="إرسال" class="btn btn-primary" onclick="return getLocation()" />
+                            </div>
+                            @*<div class="col-md-offset-4 col-md-2">
+                                    <input type="button" value="Allow app to get your loaction" class="btn btn-default" />
+                                </div>*@
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        @*<div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.Label("رقم هوية الطالب/ة او الإقامة", htmlAttributes: new { @class = "control-label" })
+                            </div>
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
+                                @Html.HiddenFor(m => m.Latitude)
+                                @Html.HiddenFor(m => m.Longitude)
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-4">
+                                <input type="button" value="Submit" class="btn btn-primary" onclick="getLocation()" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
     </div>
-</div>
 }
 
 <script type="text/javascript">
@@ -49,12 +93,12 @@
     function getLocation() {
         var myLength = $("#StudentNo").val().length;
         if (myLength > 10) {
-            alert("National id should be less than 10 character");
+            alert("يجب أن يكون الرقم القومي أقل من 10 أحرف");
             //$("#StudentNo").val("");
             return false;
         }
         if (document.getElementById('StudentNo').value == "") {
-            alert("Please Enter National Id");
+            alert("الرجاء إدخال الرقم القومي");
             return false
         }
         else {
@@ -62,7 +106,7 @@
                 navigator.geolocation.getCurrentPosition(showPosition, showError);
             }
             else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
+                x.innerHTML = "الموقع الجغرافي غير مدعوم من قبل هذا المتصفح";
             }
         }
     }
@@ -70,19 +114,19 @@
     function showError(error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                alert("Location access for the application is blocked, kindly click on help tab and follow instructions to allow access to your location.");
+                alert("تم حظر الوصول إلى الموقع للتطبيق ، يرجى النقر فوق علامة التبويب Help واتبع التعليمات للسماح بالوصول إلى موقعك.");
                 //x.innerHTML = "User denied the request for Geolocation."
                 break;
             case error.POSITION_UNAVAILABLE:
-                alert("Location information is unavailable.");
+                alert("معلومات الموقع غير متوفرة");
                 //x.innerHTML = "Location information is unavailable."
                 break;
             case error.TIMEOUT:
-                alert("The request to get user location timed out.");
+                alert("طلب الحصول على موقع المستخدم انتهت مهلة");
                 //x.innerHTML = "The request to get user location timed out."
                 break;
             case error.UNKNOWN_ERROR:
-                alert("An unknown error occurred.");
+                alert("حدث خطأ غير معروف");
                 //x.innerHTML = "An unknown error occurred."
                 break;
         }
@@ -109,16 +153,17 @@
             contentType: "application/json; charset=utf-8",
             success: function () {
                 //alert("Your details have been saved Thank you from Dar Althikr Girls");
-                alert("Thank you for submission");
+                alert("شكرا لكم");
+                $("#StudentNo").val("");
                },
                error: function () {
-                   alert("Error while inserting data");
+                   alert("خطأ أثناء إدخال البيانات");
                }
            });
     }
 
     $(document).ready(function () {
-        alert('You should be present at your residence to open this link');
+        alert('يجب ان تكون في منزلك لفتح هذا الرابط');
         //$.jAlert('ok');
     });
 

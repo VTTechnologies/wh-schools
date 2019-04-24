@@ -45,6 +45,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Assets/Images/Waad/WaadLogo.jpg">
       <publishTime>04/23/2019 12:38:30</publishTime>
     </File>
+    <File Include="Assets/Images/WaadAcademyLarge.jpg">
+      <publishTime>04/24/2019 18:11:37</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/22/2019 12:28:44</publishTime>
     </File>
@@ -139,10 +142,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:42</publishTime>
     </File>
     <File Include="bin/Waad Academy School.dll">
-      <publishTime>04/23/2019 22:14:19</publishTime>
+      <publishTime>04/24/2019 20:25:30</publishTime>
     </File>
     <File Include="bin/Waad Academy School.pdb">
-      <publishTime>04/23/2019 22:14:19</publishTime>
+      <publishTime>04/24/2019 20:25:30</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>04/22/2019 12:28:44</publishTime>
@@ -283,7 +286,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:22</publishTime>
     </File>
     <File Include="Views/Home/Instruction.cshtml">
-      <publishTime>04/23/2019 21:38:49</publishTime>
+      <publishTime>04/24/2019 16:38:39</publishTime>
     </File>
     <File Include="Views/Home/login.cshtml">
       <publishTime>04/23/2019 22:10:10</publishTime>
@@ -292,13 +295,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:48</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/23/2019 22:00:52</publishTime>
+      <publishTime>04/24/2019 18:49:56</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>04/22/2019 12:28:48</publishTime>
     </File>
     <File Include="Views/Student/Bloom.cshtml">
-      <publishTime>04/23/2019 21:50:39</publishTime>
+      <publishTime>04/24/2019 20:08:07</publishTime>
+    </File>
+    <File Include="Views/Student/DarAlThikrBoys.cshtml">
+      <publishTime>04/24/2019 20:08:12</publishTime>
+    </File>
+    <File Include="Views/Student/DarAlThikrGirls.cshtml">
+      <publishTime>04/24/2019 20:08:17</publishTime>
     </File>
     <File Include="Views/Student/DarulZikrBoys.cshtml">
       <publishTime>04/23/2019 21:49:49</publishTime>
@@ -319,16 +328,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 20:04:53</publishTime>
     </File>
     <File Include="Views/Student/WaadAcademy.cshtml">
-      <publishTime>04/23/2019 21:55:33</publishTime>
+      <publishTime>04/24/2019 20:25:17</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>04/22/2019 12:28:22</publishTime>
+      <publishTime>04/24/2019 19:00:14</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>04/22/2019 12:28:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/23/2019 19:39:05</publishTime>
+      <publishTime>04/24/2019 19:21:46</publishTime>
     </File>
   </ItemGroup>
 </Project>
