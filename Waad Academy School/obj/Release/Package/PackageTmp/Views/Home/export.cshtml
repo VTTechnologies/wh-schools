@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Export";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-1 pull-right" style="padding-top:5px">
+    <a href="@Url.Action("login","Home")">Logout</a>
+</div>
+<br /><br /><br /><br /><br />
+
+<div class="form-horizontal col-lg-6 col-md-offset-3 table-bordered " style="background:lightgray">
+
+    <h2 class="text-center">Export</h2>
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-3">Select School</label>
+        <div class="col-md-8">
+            <select name="school" id="ddlschool" class="form-control">
+                <option value="0">Please Select School</option>
+                <option value="1">Waad Academy School</option>
+                <option value="2">Bloom</option>
+                <option value="3">DarulZikr Girls</option>
+                <option value="4">DarulZikr Boys</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3"></label>
+        <div class="col-md-8">
+            <input type="button" value="Export" id="btnexport" onclick="return Validation();" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+
+<script type="text/javascript">
+    function Validation() {
+        var e = document.getElementById("ddlschool");
+        var strUser = e.options[e.selectedIndex].value;
+        if (strUser == 0) {
+            alert("You haven't selected anything!");
+            return false
+        }
+        else {
+            window.location = '@Url.Action("Exporttoexcel", "Home")?schlid=' + strUser
+        }
+    }
+    $(document).ready(function () {
+        $("#btnexport1").click(function (e) {
+            var e = document.getElementById("ddlschool");
+            var strUser = e.options[e.selectedIndex].value;
+
+            window.location = '@Url.Action("Exporttoexcel", "Home")?schlid=' + strUser
+
+        });
+        });
+
+</script>

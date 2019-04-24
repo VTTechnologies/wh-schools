@@ -1,0 +1,128 @@
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Waad Academy School.dll.config
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Waad Academy School.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Waad Academy School.pdb
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Antlr3.Runtime.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\ClosedXML.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\DocumentFormat.OpenXml.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\EntityFramework.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\EntityFramework.SqlServer.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\ExcelNumberFormat.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\FastMember.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Core.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Cookies.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Facebook.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Google.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.OAuth.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Twitter.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Web.Infrastructure.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Newtonsoft.Json.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Owin.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Helpers.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Mvc.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Optimization.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Razor.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Deployment.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Razor.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\WebGrease.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\ClosedXML.pdb
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\ClosedXML.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\DocumentFormat.OpenXml.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\ExcelNumberFormat.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Helpers.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Mvc.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Optimization.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.Razor.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Deployment.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Razor.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Antlr3.Runtime.pdb
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Newtonsoft.Json.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\EntityFramework.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\EntityFramework.SqlServer.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Core.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Facebook.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Cookies.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.OAuth.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Google.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Twitter.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\VTT\Projects\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.dll
+E:\VTT\Projects\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.pdb
+E:\VTT\Projects\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.csprojResolveAssemblyReference.cache
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Waad Academy School.dll.config
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Waad Academy School.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Waad Academy School.pdb
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Antlr3.Runtime.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\ClosedXML.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\DocumentFormat.OpenXml.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\EntityFramework.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\EntityFramework.SqlServer.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\ExcelNumberFormat.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\FastMember.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Newtonsoft.Json.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Owin.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Helpers.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Mvc.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Optimization.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Razor.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\WebGrease.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\ClosedXML.pdb
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\ClosedXML.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\DocumentFormat.OpenXml.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\ExcelNumberFormat.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Helpers.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Mvc.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Optimization.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.Razor.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Antlr3.Runtime.pdb
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Newtonsoft.Json.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\EntityFramework.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\EntityFramework.SqlServer.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.csprojAssemblyReference.cache
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.csproj.CoreCompileInputs.cache
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.csproj.CopyComplete
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.dll
+C:\Users\Ather Syed\Desktop\Waad Academy SchoolProj\Waad Academy School\Waad Academy School\obj\Debug\Waad Academy School.pdb

@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Instruction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .row {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+
+    .clickable {
+        cursor: pointer;
+    }
+
+    .panel-heading span {
+        margin-top: -20px;
+        font-size: 15px;
+    }
+</style>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<h3>Guidelines</h3>
+@*<p><b>For Google Chrome,</b> User has to allow once for location acces if user deny it Go to chrome settings search location then select it you will see the site in blocked just delete it and allow once.
+
+<p><b>For Firefox,</b> User has to allow every time to adding a new student. or you can click on check box to make that website to access your loaction permanent</p>*@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Google Chrome</h3>
+        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>
+                Go to settings
+            </li>
+            <li>
+                Search Location in search bar
+            </li>
+            <li>
+                Click on Content Setting
+            </li>
+            <li>
+                Click on location
+            </li>
+            <li>
+                Then finally delete the blocked URL for school application
+            </li>
+            <li>
+                Refresh and allow the app to access your location
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Firefox</h3>
+        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>
+                Just refresh your website by pressing F5
+            </li>
+            <li>
+                It will ask you again for access your location
+            </li>
+            <li>
+                Click Allow button to allow your loaction.
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">IE</h3>
+        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>
+                Click on setting
+            </li>
+            <li>
+                Internet options.
+            </li>
+            <li>
+                Under the Privacy tab
+            </li>
+            <li>
+                Clear Sites
+            </li>
+            <li>
+                Click OK
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Opera</h3>
+        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>
+                Just refresh your website by pressing F5
+            </li>
+            <li>
+                It will ask you again for access your location
+            </li>
+            <li>
+                Click Allow button to allow your loaction.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).on('click', '.panel-heading span.clickable', function (e) {
+        var $this = $(this);
+        if (!$this.hasClass('panel-collapsed')) {
+            $this.parents('.panel').find('.panel-body').slideUp();
+            $this.addClass('panel-collapsed');
+            $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        } else {
+            $this.parents('.panel').find('.panel-body').slideDown();
+            $this.removeClass('panel-collapsed');
+            $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        }
+    })
+</script>
