@@ -36,19 +36,22 @@
                 <div class="col-md-6 col-md-offset-3">
                     <center>
                         <div class="row">
-                            <div class="col-md-5">
-                                @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
+                            <div class="col-xs-5 col-sm-5 hidden-lg hidden-md pull-right" style="margin-right:50px">
+                                @Html.Label("رقم هوية الطالب/ة او الإقامة", htmlAttributes: new { @class = "control-label" })
                             </div>
                             <div class="col-md-7">
-                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
                                 @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
                                 @Html.HiddenFor(m => m.Latitude)
                                 @Html.HiddenFor(m => m.Longitude)
                             </div>
+                            <div class="col-md-5 col-lg-5 hidden-xs hidden-sm">
+                                @Html.Label("رقم هوية الطالب/ة او الإقامة", htmlAttributes: new { @class = "control-label" })
+                            </div>
                         </div>
                         <br />
                         <div class="form-group">
-                            <div class="col-md-offset-5 col-md-3">
+                            <div class="col-md-offset-3 col-md-6" style="margin-left:5px">
                                 <input type="button" value="إرسال" class="btn btn-primary" onclick="return getLocation()" />
                             </div>
                             @*<div class="col-md-offset-4 col-md-2">
@@ -152,6 +155,7 @@
                 //alert("Your details have been saved Thank you from Dar Althikr Boys");
                 alert("شكرا لكم");
                 $("#StudentNo").val("");
+                window.location.href = '/Student/Thankyou';
                },
             error: function () {
                 alert("خطأ أثناء إدخال البيانات");
@@ -163,6 +167,14 @@
         alert('يجب ان تكون في منزلك لفتح هذا الرابط');
         //$.jAlert('ok');
     });
+    function OnlyNumeric(evt) {
+        debugger
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
 
+        return true;
+    }
 
 </script>

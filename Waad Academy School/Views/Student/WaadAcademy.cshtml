@@ -67,7 +67,7 @@
                                 @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
                             </div>
                             <div class="col-md-7">
-                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @maxlength = "10",@oncopy = "return false", @onpaste = "return false", @oncut = "return false"} })
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
                                 @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
                                 @Html.HiddenFor(m => m.Latitude)
                                 @Html.HiddenFor(m => m.Longitude)
@@ -75,7 +75,7 @@
                         </div>
                         <br />
                         <div class="form-group">
-                            <div class="col-md-offset-5 col-md-3">
+                            <div class="col-md-offset-5 col-md-">
                                 <input type="button" value="Submit" class="btn btn-primary" onclick="return getLocation()" />
                             </div>
                             @*<div class="col-md-offset-4 col-md-2">
@@ -161,6 +161,7 @@
                 success: function () {
                     alert("Thank you for submission");
                     $("#StudentNo").val("");
+                    window.location.href = '/Student/Thankyou';
                 },
                 error: function () {
                     alert("Error while inserting data");

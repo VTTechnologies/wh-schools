@@ -39,7 +39,7 @@
                                 @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
                             </div>
                             <div class="col-md-7">
-                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
                                 @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
                                 @Html.HiddenFor(m => m.Latitude)
                                 @Html.HiddenFor(m => m.Longitude)
@@ -151,6 +151,7 @@
                 //alert("Your details have been saved Thank you from Dar Bloom");
                 alert("Thank you for submission");
                 $("#StudentNo").val("");
+                window.location.href = '/Student/Thankyou';
                },
                error: function () {
                    alert("Error while inserting data");
@@ -162,6 +163,14 @@
         alert('You should be present at your residence to open this link');
         //$.jAlert('ok');
     });
+    function OnlyNumeric(evt) {
+        debugger
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
 
+        return true;
+    }
 
 </script>
