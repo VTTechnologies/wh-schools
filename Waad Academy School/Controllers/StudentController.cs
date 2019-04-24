@@ -33,11 +33,15 @@ namespace Waad_Academy_School.Controllers
         {
             return View();
         }
-        public ActionResult DarAlThikrGirls()
+        public ActionResult AlzikrGirlsSchool()
         {
             return View();
         }
         public ActionResult DarAlThikrBoys()
+        {
+            return View();
+        }
+        public ActionResult ThankyouArabic()
         {
             return View();
         }

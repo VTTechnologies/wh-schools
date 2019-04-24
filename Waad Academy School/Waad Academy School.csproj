@@ -299,12 +299,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Student\WaadAcademy.cshtml" />
     <Content Include="Views\Student\Bloom.cshtml" />
-    <Content Include="Views\Student\DarAlThikrGirls.cshtml" />
+    <Content Include="Views\Student\AlzikrGirlsSchool.cshtml" />
     <Content Include="Views\Student\DarAlThikrBoys.cshtml" />
     <Content Include="Views\Home\login.cshtml" />
     <Content Include="Views\Home\export.cshtml" />
     <Content Include="Views\Home\Instruction.cshtml" />
     <Content Include="Views\Student\Thankyou.cshtml" />
+    <Content Include="Views\Student\ThankyouArabic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
