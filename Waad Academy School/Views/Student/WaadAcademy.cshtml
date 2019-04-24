@@ -18,146 +18,177 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-12">
-        <img src="~/Assets/Images/Header.png" height="100%" width="100%" />
+        <img src="~/Assets/Images/WaadAcademyLarge.jpg" height="100%" width="100%" />
     </div>
     <div class="col-md-1">
     </div>
+   
 </div>
+<div class="row">
+    
+</div>
+    @*<div class="row">
+            <div class="col-md-4">
+                <img src="~/Assets/Images/Waad/WaadLogo.jpg" height="100" width="100" />
+            </div>
+            <div class="col-md-2">
 
-@*<div class="row">
-    <div class="col-md-4">
-        <img src="~/Assets/Images/Waad/WaadLogo.jpg" height="100" width="100" />
-    </div>
-    <div class="col-md-2">
+            </div>
+            <div class="col-md-4 pull-right">
+                <h1>Waad Academy</h1>
+            </div>
+        </div>*@
 
-    </div>
-    <div class="col-md-4 pull-right">
-        <h1>Waad Academy</h1>
-    </div>
-</div>*@
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+        <div class="form-horizontal" style="background:lightgray">
+            <hr />
 
-<div class="form-horizontal" style="background:lightgray">
-    <hr />
-
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
-                    </div>
-                    <div class="col-md-8">
-                        @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
-                        @Html.HiddenFor(m => m.Latitude)
-                        @Html.HiddenFor(m => m.Longitude)
-                    </div>
-                </div>
-                <br />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+           
                 <div class="form-group">
-                    <div class="col-md-offset-4 col-md-2">
-                        <input type="button" value="Create" class="btn btn-default" onclick="return getLocation()" />
+                    @*<div class="row">
+                        <center>
+                            <p><b>would like to use your current location</b></p>
+                        </center>
+                        </div>*@
+
+                        <div class="col-md-12" style="margin-left:40px">
+                            <div class="row">
+                                <p>
+                                    <b>Dear Parents,</b><br>
+
+                                    In order to provide better quality services in many different fields for our students, please kindly fill out the form below for the student's address.<br>
+
+                                    Thank you<br>
+
+                                    Waad Academy Schools
+
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
-                    @*<div class="col-md-offset-4 col-md-2">
-                        <input type="button" value="Allow app to get your loaction" class="btn btn-default" />
-                    </div>*@
+            
+            <div class="form-group">
+             
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <center>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
+                                    @Html.HiddenFor(m => m.Latitude)
+                                    @Html.HiddenFor(m => m.Longitude)
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-2">
+                                    <input type="button" value="Create" class="btn btn-primary" onclick="return getLocation()" />
+                                </div>
+                                @*<div class="col-md-offset-4 col-md-2">
+                                        <input type="button" value="Allow app to get your loaction" class="btn btn-default" />
+                                    </div>*@
+                            </div>
+                        </center>
+                    </div>
                 </div>
             </div>
+            <p id="demo"></p>
         </div>
-    </div>
-    <p id="demo"></p>
-</div>
-}
+    }
 
-<div class="row">
-    <div class="col-md-12">
-        <img src="~/Assets/Images/Footer.png" height="200" width="100%" />
+    <div class="row">
+        @*<div class="col-md-12">
+                <img src="~/Assets/Images/Footer.png" height="200" width="100%" />
+            </div>*@
     </div>
-</div>
 
-<script type="text/javascript">
-    var x = document.getElementById("demo");
-    function getLocation() {
-        var myLength = $("#StudentNo").val().length;
-        if (myLength > 10) {
-            alert("National id should be less than 10 character");
-            //$("#StudentNo").val("");
-            return false;
-        }
-        if (document.getElementById('StudentNo').value == "") {
-            alert("Please Enter Student Number")
-            return false
-        }
-        else {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
+    <script type="text/javascript">
+        var x = document.getElementById("demo");
+        function getLocation() {
+            var myLength = $("#StudentNo").val().length;
+            if (myLength > 10) {
+                alert("National id should be less than 10 character");
+                //$("#StudentNo").val("");
+                return false;
+            }
+            if (document.getElementById('StudentNo').value == "") {
+                alert("Please Enter Student Number")
+                return false
             }
             else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                }
+                else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
             }
         }
-    }
 
-    function showError(error) {
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                alert("Location access for the application is blocked, kindly click on help tab and follow instructions to allow access to your location.");
-                //x.innerHTML = "User denied the request for Geolocation."
-                break;
-            case error.POSITION_UNAVAILABLE:
-                alert("Location information is unavailable.");
-                //x.innerHTML = "Location information is unavailable."
-                break;
-            case error.TIMEOUT:
-                alert("The request to get user location timed out.");
-                //x.innerHTML = "The request to get user location timed out."
-                break;
-            case error.UNKNOWN_ERROR:
-                alert("An unknown error occurred.");
-                //x.innerHTML = "An unknown error occurred."
-                break;
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Location access for the application is blocked, kindly click on help tab and follow instructions to allow access to your location.");
+                    //x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    //x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    //x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    //x.innerHTML = "An unknown error occurred."
+                    break;
+            }
         }
-    }
-    function showPosition(position) {
-        //x.innerHTML = "Latitude: " + position.coords.latitude +"<br>Longitude: " + position.coords.longitude;
-        document.getElementById('Latitude').value = position.coords.latitude;
-        document.getElementById('Longitude').value = position.coords.longitude;
+        function showPosition(position) {
+            //x.innerHTML = "Latitude: " + position.coords.latitude +"<br>Longitude: " + position.coords.longitude;
+            document.getElementById('Latitude').value = position.coords.latitude;
+            document.getElementById('Longitude').value = position.coords.longitude;
 
 
-        var student = {
-            StudentNo : $('#StudentNo').val(),
-            SchoolId: 1,
-        Latitude : $('#Latitude').val(),
-        Longitude : $('#Longitude').val()
-        };
+            var student = {
+                StudentNo: $('#StudentNo').val(),
+                SchoolId: 1,
+                Latitude: $('#Latitude').val(),
+                Longitude: $('#Longitude').val()
+            };
 
-        debugger;
-        $.ajax({
-             url: '@Url.Action("StudentSave", "Student")',
-            data: '{student: ' + JSON.stringify(student) + '}',
-            type: "post", //HTTP POST Method
-               dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            success: function () {
-                alert("Your details have been saved");
-               },
-               error: function () {
-                   alert("Error while inserting data");
-               }
-           });
-    }
+            debugger;
+            $.ajax({
+                url: '@Url.Action("StudentSave", "Student")',
+                data: '{student: ' + JSON.stringify(student) + '}',
+                type: "post", //HTTP POST Method
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    alert("Your details have been saved");
+                },
+                error: function () {
+                    alert("Error while inserting data");
+                }
+            });
+        }
 
-    $(document).ready(function () {
-        alert('You should be present at your residence to open this link');
-        //$.jAlert('ok');
-    });
+        $(document).ready(function () {
+            alert('You should be present at your residence to open this link');
+            //$.jAlert('ok');
+        });
 
 
-</script>
+    </script>
 
 
