@@ -145,10 +145,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:42</publishTime>
     </File>
     <File Include="bin/Waad Academy School.dll">
-      <publishTime>04/25/2019 18:06:12</publishTime>
+      <publishTime>04/26/2019 14:44:49</publishTime>
     </File>
     <File Include="bin/Waad Academy School.pdb">
-      <publishTime>04/25/2019 18:06:12</publishTime>
+      <publishTime>04/26/2019 14:44:49</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>04/22/2019 12:28:44</publishTime>
@@ -184,7 +184,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:22</publishTime>
     </File>
     <File Include="Models/SchoolDB.edmx.diagram">
-      <publishTime>04/23/2019 18:38:30</publishTime>
+      <publishTime>04/26/2019 14:30:43</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>04/24/2019 20:59:40</publishTime>
@@ -349,7 +349,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/25/2019 16:14:05</publishTime>
+      <publishTime>04/26/2019 14:44:50</publishTime>
     </File>
   </ItemGroup>
 </Project>
