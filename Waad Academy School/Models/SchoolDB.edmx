@@ -30,7 +30,7 @@
           <Property Name="CreatedOn" Type="datetime" />
           <Property Name="ModifyOn" Type="datetime" />
         </EntityType>
-        <EntityType Name="Users">
+        <EntityType Name="UserDetails">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -44,7 +44,7 @@
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudentHistory" EntityType="Self.StudentHistory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -53,7 +53,7 @@
         <EntityContainer Name="Waad_Academy_SchoolEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Students" EntityType="Model.Student" />
           <EntitySet Name="StudentHistories" EntityType="Model.StudentHistory" />
-          <EntitySet Name="Users" EntityType="Model.User" />
+          <EntitySet Name="UserDetails" EntityType="Model.UserDetail" />
         </EntityContainer>
         <EntityType Name="Student">
           <Key>
@@ -80,7 +80,7 @@
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
           <Property Name="ModifyOn" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityType Name="User">
+        <EntityType Name="UserDetail">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -124,9 +124,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="Model.User">
-              <MappingFragment StoreEntitySet="Users">
+          <EntitySetMapping Name="UserDetails">
+            <EntityTypeMapping TypeName="Model.UserDetail">
+              <MappingFragment StoreEntitySet="UserDetails">
                 <ScalarProperty Name="isactive" ColumnName="isactive" />
                 <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
                 <ScalarProperty Name="createdDate" ColumnName="createdDate" />

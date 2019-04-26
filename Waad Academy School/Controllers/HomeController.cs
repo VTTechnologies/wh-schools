@@ -27,7 +27,7 @@ namespace Waad_Academy_School.Controllers
         [HttpPost]
         public ActionResult login(LoginModel loginviewmodel)
         {
-            var adminData = _contextdb.Users.Where(x => x.UserName == loginviewmodel.Email && x.Password == loginviewmodel.Password && x.isactive == true).FirstOrDefault();
+            var adminData = _contextdb.UserDetails.Where(x => x.UserName == loginviewmodel.Email && x.Password == loginviewmodel.Password && x.isactive == true).FirstOrDefault();
             if (adminData != null)
             {
                 Session["std"] = "true";

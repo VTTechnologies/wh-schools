@@ -12,7 +12,7 @@ namespace Waad_Academy_School.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class UserDetail
     {
         public int Id { get; set; }
         public string UserName { get; set; }

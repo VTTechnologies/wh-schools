@@ -27,6 +27,6 @@ namespace Waad_Academy_School.Models
     
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<StudentHistory> StudentHistories { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserDetail> UserDetails { get; set; }
     }
 }
