@@ -27,7 +27,8 @@ namespace Waad_Academy_School.Controllers
         [HttpPost]
         public ActionResult login(LoginModel loginviewmodel)
         {
-            if (loginviewmodel.Email == "admin@admin.com" && loginviewmodel.Password == "123")
+            var adminData = _contextdb.Users.Where(x => x.UserName == loginviewmodel.Email && x.Password == loginviewmodel.Password && x.isactive == true).FirstOrDefault();
+            if (adminData != null)
             {
                 Session["std"] = "true";
                 return RedirectToAction("export");

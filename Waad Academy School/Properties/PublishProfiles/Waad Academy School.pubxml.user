@@ -145,10 +145,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:42</publishTime>
     </File>
     <File Include="bin/Waad Academy School.dll">
-      <publishTime>04/24/2019 22:15:45</publishTime>
+      <publishTime>04/25/2019 18:06:12</publishTime>
     </File>
     <File Include="bin/Waad Academy School.pdb">
-      <publishTime>04/24/2019 22:15:45</publishTime>
+      <publishTime>04/25/2019 18:06:12</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>04/22/2019 12:28:44</publishTime>
@@ -303,11 +303,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>04/22/2019 12:28:48</publishTime>
     </File>
+    <File Include="Views/Student/AlzikrGirlsSchool.cshtml">
+      <publishTime>04/25/2019 18:06:06</publishTime>
+    </File>
     <File Include="Views/Student/Bloom.cshtml">
-      <publishTime>04/24/2019 22:10:19</publishTime>
+      <publishTime>04/25/2019 16:10:42</publishTime>
     </File>
     <File Include="Views/Student/DarAlThikrBoys.cshtml">
-      <publishTime>04/24/2019 22:10:28</publishTime>
+      <publishTime>04/25/2019 17:27:06</publishTime>
     </File>
     <File Include="Views/Student/DarAlThikrGirls.cshtml">
       <publishTime>04/24/2019 22:10:39</publishTime>
@@ -331,10 +334,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 20:04:53</publishTime>
     </File>
     <File Include="Views/Student/Thankyou.cshtml">
-      <publishTime>04/24/2019 22:11:24</publishTime>
+      <publishTime>04/24/2019 22:41:00</publishTime>
+    </File>
+    <File Include="Views/Student/ThankyouArabic.cshtml">
+      <publishTime>04/24/2019 22:42:27</publishTime>
     </File>
     <File Include="Views/Student/WaadAcademy.cshtml">
-      <publishTime>04/24/2019 22:09:28</publishTime>
+      <publishTime>04/25/2019 16:10:13</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/24/2019 19:00:14</publishTime>
@@ -343,7 +349,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/22/2019 12:28:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/24/2019 22:15:46</publishTime>
+      <publishTime>04/25/2019 16:14:05</publishTime>
     </File>
   </ItemGroup>
 </Project>

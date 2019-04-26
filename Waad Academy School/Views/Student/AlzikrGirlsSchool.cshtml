@@ -1,6 +1,6 @@
 ﻿@model Waad_Academy_School.Models.Student
 @{
-    ViewBag.Title = "DarAlThikrGirls";
+    ViewBag.Title = "AlzikrGirlsSchool";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
@@ -22,11 +22,10 @@
                 <div class="col-md-10 pull-right" style="margin-left:40px;margin-right:40px">
                     <p style="text-align:right; font-size:large">
                         @*<b>Dear Parents,</b><br>*@
-                        من أجل تقديم خدمات ذات جودة أفضل في العديد من المجالات المختلفة لطالباتنا ، يرجى ملء النموذج أدناه للحصول على عنوان الطالب
+                        من أجل تقديم خدمات ذات جودة أفضل في العديد من المجالات المختلفة لطالباتنا، يرجى ملء النموذج أدناه للحصول على عنوان الطالبة
 
-                        رقم هوية الطالبة/الإقامة
                         <br>
-                    <p style="text-align:right; font-size:large">شكرا</p>
+<p style="text-align:right; font-size:large">شكرا</p>
                     <br>
                     </p>
                 </div>
@@ -38,22 +37,22 @@
                 <div class="col-md-6 col-md-offset-3">
                     <center>
                         <div class="row">
-                            <div class="col-xs-5 col-sm-5 hidden-lg hidden-md pull-right" style="margin-right:50px">
-                                @Html.Label("رقم هوية الطالب/ة او الإقامة", htmlAttributes: new { @class = "control-label" })
+                            <div class="col-md-12">
+                                @Html.Label("رقم هوية الطالبة او الإقامة", htmlAttributes: new { @class = "control-label" })
                             </div>
-                            <div class="col-md-7">
-                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                @*@Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })*@
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @oncopy = "return false", @onpaste = "return false", @oncut = "return false", @maxlength = "10" } })
                                 @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
                                 @Html.HiddenFor(m => m.Latitude)
                                 @Html.HiddenFor(m => m.Longitude)
                             </div>
-                            <div class="col-md-5 col-lg-5 hidden-xs hidden-sm">
-                                @Html.Label("رقم هوية الطالب/ة او الإقامة", htmlAttributes: new { @class = "control-label" })
-                            </div>
                         </div>
                         <br />
                         <div class="form-group">
-                            <div class="col-md-offset-3 col-md-6" style="margin-left:5px">
+                            <div class="col-md-offset-4 col-md-4">
                                 <input type="button" value="إرسال" class="btn btn-primary" onclick="return getLocation()" />
                             </div>
                             @*<div class="col-md-offset-4 col-md-2">
@@ -90,23 +89,25 @@
 
     </div>
 }
-    <div class="row">
-        <div class="col-md-12">
-            <img src="~/Assets/Images/Footer.png" height="80%" width="100%" />
-        </div>
+<div class="row">
+    <div class="col-md-12">
+        <img src="~/Assets/Images/Footer.png" height="80%" width="100%" />
     </div>
+</div>
 <script type="text/javascript">
     var x = document.getElementById("demo");
     function getLocation() {
-        var myLength = $("#StudentNo").val().length;
-        if (myLength > 10) {
-            alert("يجب أن يكون الرقم القومي أقل من 10 أحرف");
-            //$("#StudentNo").val("");
-            return false;
-        }
-        if (document.getElementById('StudentNo').value == "") {
+
+        var stdNo = $("#StudentNo").val();
+        var val = $.isNumeric($("#StudentNo").val());
+
+        if (stdNo == "") {
             alert("الرجاء إدخال الرقم القومي");
             return false
+        }
+        if (stdNo.length > 10 || stdNo.length < 10 || val == false) {
+            alert("رقم الطالب غير صحيح");
+            return false;
         }
         else {
             if (navigator.geolocation) {
@@ -116,6 +117,7 @@
                 x.innerHTML = "الموقع الجغرافي غير مدعوم من قبل هذا المتصفح";
             }
         }
+
     }
 
     function showError(error) {

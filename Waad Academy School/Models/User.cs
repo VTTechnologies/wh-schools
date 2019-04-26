@@ -12,14 +12,13 @@ namespace Waad_Academy_School.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class User
     {
-        public int StudentId { get; set; }
-        public string StudentNo { get; set; }
-        public Nullable<int> SchoolId { get; set; }
-        public Nullable<decimal> Latitude { get; set; }
-        public Nullable<decimal> Longitude { get; set; }
-        public Nullable<System.DateTime> CreatedOn { get; set; }
-        public Nullable<System.DateTime> ModifyOn { get; set; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public Nullable<System.DateTime> createdDate { get; set; }
+        public Nullable<System.DateTime> modifyDate { get; set; }
+        public Nullable<bool> isactive { get; set; }
     }
 }

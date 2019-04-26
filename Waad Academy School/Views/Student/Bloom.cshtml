@@ -39,7 +39,8 @@
                                 @Html.LabelFor(model => model.StudentNo, htmlAttributes: new { @class = "control-label" })
                             </div>
                             <div class="col-md-7">
-                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })
+                                @*@Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return OnlyNumeric(this);", @onkeyup = "return OnlyNumeric(this);", @onkeydown = "return OnlyNumeric(this);", @maxlength = "10", @oncopy = "return false", @onpaste = "return false", @oncut = "return false" } })*@
+                                @Html.EditorFor(model => model.StudentNo, new { htmlAttributes = new { @class = "form-control", @oncopy = "return false", @onpaste = "return false", @oncut = "return false", @maxlength = "10" } })
                                 @Html.ValidationMessageFor(model => model.StudentNo, "", new { @class = "text-danger" })
                                 @Html.HiddenFor(m => m.Latitude)
                                 @Html.HiddenFor(m => m.Longitude)
@@ -87,15 +88,18 @@
 <script type="text/javascript">
     var x = document.getElementById("demo");
     function getLocation() {
-        var myLength = $("#StudentNo").val().length;
-        if (myLength > 10) {
-            alert("National id should be less than 10 character");
-            //$("#StudentNo").val("");
-            return false;
-        }
-        if (document.getElementById('StudentNo').value == "") {
+
+        var stdNo = $("#StudentNo").val();
+        var val = $.isNumeric($("#StudentNo").val());
+
+        if (stdNo == "") {
             alert("Please Enter National Id");
             return false
+        }
+
+        if (stdNo.length > 10 || stdNo.length < 10 || val == false) {
+            alert("Invalid Student no");
+            return false;
         }
         else {
             if (navigator.geolocation) {

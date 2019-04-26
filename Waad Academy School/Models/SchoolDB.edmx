@@ -30,14 +30,31 @@
           <Property Name="CreatedOn" Type="datetime" />
           <Property Name="ModifyOn" Type="datetime" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="isactive" Type="bit" />
+        </EntityType>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudentHistory" EntityType="Self.StudentHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Waad_Academy_SchoolEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Students" EntityType="Model.Student" />
+          <EntitySet Name="StudentHistories" EntityType="Model.StudentHistory" />
+          <EntitySet Name="Users" EntityType="Model.User" />
+        </EntityContainer>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="StudentId" />
@@ -50,10 +67,6 @@
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
           <Property Name="ModifyOn" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="Waad_Academy_SchoolEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Students" EntityType="Self.Student" />
-          <EntitySet Name="StudentHistories" EntityType="Model.StudentHistory" />
-        </EntityContainer>
         <EntityType Name="StudentHistory">
           <Key>
             <PropertyRef Name="ID" />
@@ -67,7 +80,18 @@
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
           <Property Name="ModifyOn" Type="DateTime" Precision="3" />
         </EntityType>
-      </Schema>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="modifyDate" Type="DateTime" Precision="3" />
+          <Property Name="isactive" Type="Boolean" />
+        </EntityType>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -78,11 +102,11 @@
               <MappingFragment StoreEntitySet="Student">
                 <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
                 <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
-                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
-                <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
                 <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -97,6 +121,18 @@
                 <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Model.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
