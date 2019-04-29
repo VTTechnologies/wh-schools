@@ -12,7 +12,7 @@
 
 @using (Html.BeginForm())
 {
-@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
     <div class="form-horizontal col-lg-6 col-md-offset-3 table-bordered " style="background:lightgray">
         <h2 class="text-center">Login</h2>
         <br />
@@ -37,16 +37,20 @@
             </div>
             @*@Html.ActionLink("Export", "Export", null, new { schlid = 4 }, htmlAttributes: new { @class = "btn btn-default" });*@
         </div>
+        <div class="form-horizontal">
+            @Html.ActionLink("Reset Password", "ResetPassword")
+            <br /><br />
+        </div>
     </div>
 }
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 @if (!string.IsNullOrEmpty(ViewBag.Message))
 {
 
-<script type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function()
         {
             alert("@ViewBag.Message");
         })
-</script>
+    </script>
 }

@@ -95,5 +95,32 @@ namespace Waad_Academy_School.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult ResetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ResetPassword(ManageUserViewModel manageUserViewModel)
+        {
+            if(ModelState.IsValid)
+            {
+                var adminModel = _contextdb.UserDetails.Where(x => x.Password == manageUserViewModel.OldPassword).FirstOrDefault();
+                if (adminModel == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Incorrect old password");
+                    return View();
+                }
+                else
+                {
+                    adminModel.Password = manageUserViewModel.NewPassword;
+                    _contextdb.SaveChanges();
+                    ViewBag.SuccessMsg = "Password changed successfully";
+                    return View();
+                }
+            }
+            return View();
+        }
     }
 }
