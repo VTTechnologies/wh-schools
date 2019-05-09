@@ -10,7 +10,7 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>Waad_Academy_School.Models.Waad_Academy_SchoolEntities</WebStackScaffolding_DbContextTypeFullName>
     <NameOfLastUsedPublishProfile>Waad Academy School</NameOfLastUsedPublishProfile>
-    <LastActiveSolutionConfig>Release|Any CPU</LastActiveSolutionConfig>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44300</IISExpressSSLPort>
